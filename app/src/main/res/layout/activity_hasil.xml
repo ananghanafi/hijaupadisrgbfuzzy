@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hasil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/padi"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="app.com.hijaupadi.HasilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="300dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="BWD : "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_5"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="CHART HISTOGRAM S-RGB"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="CHART HISTOGRAM S-RGB" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_2"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="HISTOGRAM SRGB" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/cubiclinechart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_3"
+                android:layout_marginTop="49dp"
+                android:background="#FFFFFF"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cubiclinechart"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="CHART BIN WARNA" />
+
+
+            <org.eazegraph.lib.charts.ValueLineChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cubiclinechart2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/tv_4"
+                android:background="#FFFFFF"
+                app:egCurveSmoothness="0.4"
+                app:egIndicatorLineColor="#B00003"
+                app:egLegendHeight="40dp"
+                app:egShowStandardValue="true"
+                app:egUseCubic="true"
+                app:egUseOverlapFill="false" />
+
+            <TextView
+                android:id="@+id/tv_6"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cubiclinechart2"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="FUNGSI KEANGGOTAAN PARAMETER RED (R)" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/cubiclinechart3"
+                android:layout_below="@+id/tv_6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_7"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cubiclinechart3"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="FUNGSI KEANGGOTAAN PARAMETER GREEN (G)" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/cubiclinechart4"
+                android:layout_below="@+id/tv_7"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/tv_8"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cubiclinechart4"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="FUNGSI KEANGGOTAAN PARAMETER BLUE (B)" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/cubiclinechart5"
+                android:layout_below="@+id/tv_8"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_9"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cubiclinechart5"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="OUTPUT" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/cubiclinechart6"
+                android:layout_below="@+id/tv_9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_2"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Segitiga - 3 Var"
+                    android:textColor="@color/cardview_light_background" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Sigmoid"
+                    android:textColor="@color/cardview_light_background" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Segitiga - 4 var"
+                    android:textColor="@color/cardview_light_background" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
